@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HaushaltsbuchDS" targetNamespace="http://tempuri.org/HaushaltsbuchDS.xsd" xmlns:mstns="http://tempuri.org/HaushaltsbuchDS.xsd" xmlns="http://tempuri.org/HaushaltsbuchDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HaushaltsbuchDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="HaushaltsbuchDS" msprop:Generator_UserDSName="HaushaltsbuchDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Buchungssatz" msprop:Generator_TableClassName="BuchungssatzDataTable" msprop:Generator_TableVarName="tableBuchungssatz" msprop:Generator_TablePropName="Buchungssatz" msprop:Generator_RowDeletingName="BuchungssatzRowDeleting" msprop:Generator_RowChangingName="BuchungssatzRowChanging" msprop:Generator_RowEvHandlerName="BuchungssatzRowChangeEventHandler" msprop:Generator_RowDeletedName="BuchungssatzRowDeleted" msprop:Generator_UserTableName="Buchungssatz" msprop:Generator_RowChangedName="BuchungssatzRowChanged" msprop:Generator_RowEvArgName="BuchungssatzRowChangeEvent" msprop:Generator_RowClassName="BuchungssatzRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Kategorie" msprop:Generator_ColumnVarNameInTable="columnKategorie" msprop:Generator_ColumnPropNameInRow="Kategorie" msprop:Generator_ColumnPropNameInTable="KategorieColumn" msprop:Generator_UserColumnName="Kategorie" type="xs:string" />
+              <xs:element name="Betrag" msprop:Generator_ColumnVarNameInTable="columnBetrag" msprop:Generator_ColumnPropNameInRow="Betrag" msprop:Generator_ColumnPropNameInTable="BetragColumn" msprop:Generator_UserColumnName="Betrag" type="xs:decimal" />
+              <xs:element name="Datum" msprop:Generator_ColumnVarNameInTable="columnDatum" msprop:Generator_ColumnPropNameInRow="Datum" msprop:Generator_ColumnPropNameInTable="DatumColumn" msprop:Generator_UserColumnName="Datum" type="xs:dateTime" />
+              <xs:element name="Memo" msprop:Generator_ColumnVarNameInTable="columnMemo" msprop:Generator_ColumnPropNameInRow="Memo" msprop:Generator_ColumnPropNameInTable="MemoColumn" msprop:Generator_UserColumnName="Memo" type="xs:string" minOccurs="0" />
+              <xs:element name="Typ" msprop:Generator_ColumnVarNameInTable="columnTyp" msprop:Generator_ColumnPropNameInRow="Typ" msprop:Generator_ColumnPropNameInTable="TypColumn" msprop:Generator_UserColumnName="Typ" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
