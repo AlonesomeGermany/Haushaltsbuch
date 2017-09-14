@@ -5,6 +5,12 @@ namespace Haushaltsbuch
 {
     static class Functions
     {
+        public static bool IsDate(string input)
+        {
+            return DateTime.TryParseExact(input, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None,
+                out var _);
+        }
+
         public static DateTime GetDate(string input)
         {
             if (DateTime.TryParseExact(input, "dd.MM.yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out var date))
@@ -23,7 +29,7 @@ namespace Haushaltsbuch
             return (DateTime)input;
         }
 
-        public static DateTime? GetDate(short month, short year)
+        public static DateTime GetDate(short month, short year)
         {
             if (month > 0 && month < 13)
             {
@@ -38,14 +44,13 @@ namespace Haushaltsbuch
                     return DateTime.ParseExact(datestring, "yyyy-MM-dd", CultureInfo.InvariantCulture);
                 }
             }
-            return null;
+            return GetDate((DateTime?)null);
         }
 
         public static decimal Amount(string input)
         {
             decimal.TryParse(input, out var amount);
             return amount;
-        }      
-
+        }       
     }
 }

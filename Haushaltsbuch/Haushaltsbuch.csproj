@@ -49,7 +49,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HaushaltsbuchDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Outpayment.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Types.cs" />
     <Compile Include="ViewModel.cs" />
