@@ -1,0 +1,11 @@
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\HaushaltsbuchTests.dll
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\HaushaltsbuchTests.pdb
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\nunit.framework.dll
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\nunit.framework.xml
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.csprojResolveAssemblyReference.cache
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.csproj.CoreCompileInputs.cache
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.dll
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.pdb
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.exe
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.pdb
+D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.exe.config

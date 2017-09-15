@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Haushaltsbuch.DataSets;
+using hb.DataSets;
 
-namespace Haushaltsbuch
+namespace hb
 {
     static class Cash
     {
@@ -20,7 +20,7 @@ namespace Haushaltsbuch
             return CalculateAmount(result);
         }
 
-        private static decimal CalculateAmount(IEnumerable<HaushaltsbuchDS.BuchungssatzRow> result)
+        internal static decimal CalculateAmount(IOrderedEnumerable<HaushaltsbuchDS.BuchungssatzRow> result)
         {
             decimal retValue = 0;
             foreach (HaushaltsbuchDS.BuchungssatzRow row in result)

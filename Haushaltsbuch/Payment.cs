@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
-using Haushaltsbuch.DataSets;
+using hb.DataSets;
 
-namespace Haushaltsbuch
+namespace hb
 {
     internal static class Payment
     {

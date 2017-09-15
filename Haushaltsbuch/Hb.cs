@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Linq;
-using Haushaltsbuch.DataSets;
+using hb.DataSets;
 
-namespace Haushaltsbuch
+namespace hb
 {
-    class Hb
+    internal static class Hb
     {
         private const string TypeOutpayment = "auszahlung";
         private const string TypePayment = "einzahlung";

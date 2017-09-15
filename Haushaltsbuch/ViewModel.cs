@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Haushaltsbuch
+namespace hb
 {
     class ViewModel
     {

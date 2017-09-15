@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Haushaltsbuch", "Haushaltsbuch\Haushaltsbuch.csproj", "{47AFF3F0-BC61-4BE3-A708-DEFFC263D2AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaushaltsbuchTests", "HaushaltsbuchTests\HaushaltsbuchTests.csproj", "{08839588-7E25-46ED-8498-12163BF1D69C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{47AFF3F0-BC61-4BE3-A708-DEFFC263D2AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47AFF3F0-BC61-4BE3-A708-DEFFC263D2AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47AFF3F0-BC61-4BE3-A708-DEFFC263D2AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08839588-7E25-46ED-8498-12163BF1D69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08839588-7E25-46ED-8498-12163BF1D69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08839588-7E25-46ED-8498-12163BF1D69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08839588-7E25-46ED-8498-12163BF1D69C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace Haushaltsbuch
+namespace hb
 {
     static class Functions
     {
