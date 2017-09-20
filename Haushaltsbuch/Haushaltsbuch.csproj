@@ -42,16 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cash.cs" />
-    <Compile Include="Functions.cs" />
+    <Compile Include="Static Objects\Cash.cs" />
+    <Compile Include="Static Objects\Functions.cs" />
     <Compile Include="DataSets\HaushaltsbuchDS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HaushaltsbuchDS.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Payment.cs" />
-    <Compile Include="Types.cs" />
-    <Compile Include="ViewModel.cs" />
+    <Compile Include="Structures\InputParameters.cs" />
+    <Compile Include="Static Objects\Payment.cs" />
+    <Compile Include="Structures\Types.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="Hb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,6 +7,7 @@ namespace hb
     internal static class Payment
     {
         internal static readonly HaushaltsbuchDS Dataset = new HaushaltsbuchDS();
+        private static readonly bool HasSavedRecords;
 
         static Payment()
         {
@@ -14,11 +15,9 @@ namespace hb
             {
                 Dataset.ReadXml("haushaltsbuch.xml");
                 Dataset.ReadXmlSchema("haushaltsbuch.xsd");
+                HasSavedRecords = true;
             }
-            else { 
-                using (File.Create("haushaltsbuch.xml"))
-                {                    
-                }
+            else {               
                 Dataset.WriteXmlSchema("haushaltsbuch.xsd");
             }
         }
@@ -56,7 +55,10 @@ namespace hb
         public static HaushaltsbuchDS.BuchungssatzDataTable ReadAllRecords()
         {
             Dataset.Buchungssatz.Clear();
-            Dataset.ReadXml("haushaltsbuch.xml");
+            if (HasSavedRecords)
+            {
+                Dataset.ReadXml("haushaltsbuch.xml");
+            }
             return Dataset.Buchungssatz;
         }
     }

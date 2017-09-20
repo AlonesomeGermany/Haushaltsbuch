@@ -9,14 +9,14 @@ namespace hb
     {
         public static decimal GetCashAmount(HaushaltsbuchDS.BuchungssatzDataTable records, DateTime input)
         {            
-            var result = from HaushaltsbuchDS.BuchungssatzRow r in records where r.Datum <= input.Date orderby r.Datum select r;
+            var result = from HaushaltsbuchDS.BuchungssatzRow r in records where r.Datum.Date <= input.Date orderby r.Datum select r;
             return CalculateAmount(result);
         }        
 
         public static decimal GetCategoryAmount(HaushaltsbuchDS.BuchungssatzDataTable records, string category,
             DateTime input)
         {            
-            var result = from HaushaltsbuchDS.BuchungssatzRow r in records where r.Datum <= input.Date && r.Kategorie == category orderby r.Datum select r;
+            var result = from HaushaltsbuchDS.BuchungssatzRow r in records where r.Datum.Date <= input.Date && r.Kategorie == category orderby r.Datum select r;
             return CalculateAmount(result);
         }
 
@@ -40,7 +40,7 @@ namespace hb
         public static List<ViewModel> GetAllCategories(HaushaltsbuchDS.BuchungssatzDataTable table, DateTime date)
         {
             var result = new List<ViewModel>();
-            var query = (from HaushaltsbuchDS.BuchungssatzRow r in table where r.Typ == (int)Types.BookingTypeEnum.Outbound && r.Datum <= date.Date orderby r.Kategorie select r).ToList();
+            var query = (from HaushaltsbuchDS.BuchungssatzRow r in table where r.Typ == (int)Types.BookingTypeEnum.Outbound && r.Datum.Date <= date.Date orderby r.Kategorie select r).ToList();
             
             var previousCategory = query.FirstOrDefault()?.Kategorie ?? string.Empty;            
             var previousAmount = query.FirstOrDefault()?.Betrag ?? 0;
@@ -57,7 +57,10 @@ namespace hb
                 }
                 previousCategory = resultRow.Kategorie;
             }
-            result.Add(new ViewModel(0, previousAmount * (-1), previousCategory));
+            if (previousCategory != string.Empty)
+            {
+                result.Add(new ViewModel(0, previousAmount * (-1), previousCategory));
+            }
             return result;
         }
     }
