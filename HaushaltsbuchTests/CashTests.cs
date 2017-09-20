@@ -53,7 +53,7 @@ namespace hbTests
         }
 
         [Test]
-        public void CalculateAmount_TwoValuesAdded()
+        public void CalculateAmount_TwoValuesAdded_CorrectAmmount()
         {
             var rows = new List<HaushaltsbuchDS.BuchungssatzRow>
             {

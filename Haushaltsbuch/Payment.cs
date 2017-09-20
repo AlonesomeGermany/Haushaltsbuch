@@ -6,15 +6,21 @@ namespace hb
 {
     internal static class Payment
     {
-        private static readonly HaushaltsbuchDS Dataset = new HaushaltsbuchDS();
+        internal static readonly HaushaltsbuchDS Dataset = new HaushaltsbuchDS();
 
         static Payment()
         {
-            if (File.Exists("haushaltsbuch.xml")) Dataset.ReadXml("haushaltsbuch.xml");
-            else
+            if (File.Exists("haushaltsbuch.xml") && File.Exists("haushaltsbuch.xsd") && File.ReadAllText("haushaltsbuch.xml") != string.Empty)
+            {
+                Dataset.ReadXml("haushaltsbuch.xml");
+                Dataset.ReadXmlSchema("haushaltsbuch.xsd");
+            }
+            else { 
                 using (File.Create("haushaltsbuch.xml"))
-                {
+                {                    
                 }
+                Dataset.WriteXmlSchema("haushaltsbuch.xsd");
+            }
         }
 
         public static void CreateNewRecord(Types.BookingTypeEnum type, DateTime date, decimal amount)
