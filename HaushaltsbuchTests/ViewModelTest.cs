@@ -1,8 +1,8 @@
-﻿using System.Linq.Expressions;
-using hb;
+﻿using hb;
+using hb.ViewModel;
 using NUnit.Framework;
 
-namespace hbTests
+namespace HaushaltsbuchTests
 {
     [TestFixture]
     public class ViewModelTest

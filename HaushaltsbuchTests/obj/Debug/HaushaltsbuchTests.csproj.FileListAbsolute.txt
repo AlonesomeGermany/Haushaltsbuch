@@ -9,3 +9,14 @@ D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.pdb
 D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.exe
 D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.pdb
 D:\VB.Net Test\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.exe.config
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\HaushaltsbuchTests.dll
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\HaushaltsbuchTests.pdb
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.exe
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\nunit.framework.dll
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.pdb
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\hb.exe.config
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\bin\Debug\nunit.framework.xml
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.csprojResolveAssemblyReference.cache
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.csproj.CoreCompileInputs.cache
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.dll
+E:\Benutzer\Christian\Documents\Programmierung\Haushaltsbuch\HaushaltsbuchTests\obj\Debug\HaushaltsbuchTests.pdb

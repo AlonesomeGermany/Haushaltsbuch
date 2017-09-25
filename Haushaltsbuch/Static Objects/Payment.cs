@@ -2,12 +2,12 @@
 using System.IO;
 using hb.DataSets;
 
-namespace hb
+namespace hb.Static_Objects
 {
     internal static class Payment
     {
         internal static readonly HaushaltsbuchDS Dataset = new HaushaltsbuchDS();
-        private static readonly bool HasSavedRecords;
+        private static bool _hasSavedRecords;
 
         static Payment()
         {
@@ -15,7 +15,7 @@ namespace hb
             {
                 Dataset.ReadXml("haushaltsbuch.xml");
                 Dataset.ReadXmlSchema("haushaltsbuch.xsd");
-                HasSavedRecords = true;
+                _hasSavedRecords = true;
             }
             else {               
                 Dataset.WriteXmlSchema("haushaltsbuch.xsd");
@@ -50,12 +50,13 @@ namespace hb
         public static void SaveRecord()
         {
             Dataset.WriteXml("haushaltsbuch.xml");
+            _hasSavedRecords = true;
         }
 
         public static HaushaltsbuchDS.BuchungssatzDataTable ReadAllRecords()
         {
             Dataset.Buchungssatz.Clear();
-            if (HasSavedRecords)
+            if (_hasSavedRecords)
             {
                 Dataset.ReadXml("haushaltsbuch.xml");
             }

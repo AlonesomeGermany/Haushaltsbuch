@@ -1,8 +1,9 @@
 ﻿using System;
 using hb;
+using hb.Static_Objects;
 using NUnit.Framework;
 
-namespace hbTests
+namespace HaushaltsbuchTests
 {
     [TestFixture]
     public class FunctionTests

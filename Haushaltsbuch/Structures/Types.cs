@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace hb
+﻿namespace hb
 {
     static class Types
     {

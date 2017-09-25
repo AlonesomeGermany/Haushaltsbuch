@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using System.Linq;
+using hb.Structures;
 
-namespace hb
+namespace hb.Static_Objects
 {
     static class Functions
     {

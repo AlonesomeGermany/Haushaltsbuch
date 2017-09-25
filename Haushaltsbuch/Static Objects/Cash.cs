@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using hb.DataSets;
 
-namespace hb
+namespace hb.Static_Objects
 {
     static class Cash
     {
@@ -37,9 +37,9 @@ namespace hb
             return retValue;
         }
 
-        public static List<ViewModel> GetAllCategories(HaushaltsbuchDS.BuchungssatzDataTable table, DateTime date)
+        public static List<ViewModel.ViewModel> GetAllCategories(HaushaltsbuchDS.BuchungssatzDataTable table, DateTime date)
         {
-            var result = new List<ViewModel>();
+            var result = new List<ViewModel.ViewModel>();
             var query = (from HaushaltsbuchDS.BuchungssatzRow r in table where r.Typ == (int)Types.BookingTypeEnum.Outbound && r.Datum.Date <= date.Date orderby r.Kategorie select r).ToList();
             
             var previousCategory = query.FirstOrDefault()?.Kategorie ?? string.Empty;            
@@ -52,14 +52,14 @@ namespace hb
                 }
                 else
                 {
-                    result.Add(new ViewModel(0, previousAmount * (-1), previousCategory));
-                    previousAmount = 0;
+                    result.Add(new ViewModel.ViewModel(0, previousAmount * (-1), previousCategory));
+                    previousAmount = resultRow.Betrag;
                 }
                 previousCategory = resultRow.Kategorie;
             }
             if (previousCategory != string.Empty)
             {
-                result.Add(new ViewModel(0, previousAmount * (-1), previousCategory));
+                result.Add(new ViewModel.ViewModel(0, previousAmount * (-1), previousCategory));
             }
             return result;
         }

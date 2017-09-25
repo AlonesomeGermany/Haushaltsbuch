@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using hb;
 using hb.DataSets;
+using hb.Static_Objects;
 using NUnit.Framework;
 
-namespace hbTests
+namespace HaushaltsbuchTests
 {
     [TestFixture]
     public class CashTests
@@ -53,7 +54,7 @@ namespace hbTests
         }
 
         [Test]
-        public void CalculateAmount_TwoValuesAdded_CorrectAmmount()
+        public void CalculateAmount_TwoValuesAdded_CorrectAmount()
         {
             var rows = new List<HaushaltsbuchDS.BuchungssatzRow>
             {
@@ -65,24 +66,34 @@ namespace hbTests
         }
 
         [Test]
-        public void GetCashAmount_ReturnCorrectValue()
+        public void GetCashAmount_AllAmountRead_ReturnCorrectValue()
         {
             var result = Cash.GetCashAmount(_testDataTable, Functions.GetDate("03.01.1982"));
             Assert.That(result, Is.EqualTo(400));
         }
 
         [Test]
-        public void GetCategoryAmount_ReturnCorrectValue()
+        public void GetCategoryAmount_ReadTestData_ReturnCorrectValue()
         {
             var result = Cash.GetCategoryAmount(_testDataTable, "Miete", Functions.GetDate("02.02.1982"));
             Assert.That(result, Is.EqualTo(-1400));
         }
 
         [Test]
-        public void GetAllCategories_AllCategoriesReturned()
+        public void GetAllCategories_ReadTestData_CorrectNumberReturned()
         {
             var result = Cash.GetAllCategories(_testDataTable, Functions.GetDate("28.02.1982"));
             Assert.That(result.Count, Is.EqualTo(4));
+        }
+
+        [Test]
+        public void GetAllCategories_ReadTestData_CorrectValuesReturned()
+        {
+            var result = Cash.GetAllCategories(_testDataTable, Functions.GetDate("28.02.1982"));            
+            Assert.That(result[0].Categorytotal, Is.EqualTo("Getränke: 50 EUR"));
+            Assert.That(result[1].Categorytotal, Is.EqualTo("Kino: 10 EUR"));
+            Assert.That(result[2].Categorytotal, Is.EqualTo("Lebensmittel: 200 EUR"));
+            Assert.That(result[3].Categorytotal, Is.EqualTo("Miete: 1400 EUR"));
         }
     }
 }

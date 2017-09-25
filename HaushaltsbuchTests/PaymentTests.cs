@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Security.Policy;
 using hb;
 using hb.DataSets;
+using hb.Static_Objects;
 using NUnit.Framework;
 
-namespace hbTests
+namespace HaushaltsbuchTests
 {
     [TestFixture]
     public class PaymentTests

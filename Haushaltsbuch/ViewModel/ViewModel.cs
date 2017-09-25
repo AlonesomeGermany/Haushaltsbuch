@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace hb
+namespace hb.ViewModel
 {
     class ViewModel
     {
